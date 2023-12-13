@@ -10935,9 +10935,10 @@ setInterval(() => {
         }
       })
     })
-    if(keywordeles[0].searchVolume > keywordeles[1].searchVolume) {
-      document.querySelector(".term-actions__button--lower").style.background = "green"
-    } else {
-      document.querySelector(".term-actions__button--higher").style.background = "green"
+    if(keywordeles[0].searchVolume >= keywordeles[1].searchVolume) {
+      document.querySelector(".term-actions__button--lower").click()
+    } 
+    if(keywordeles[0].searchVolume <= keywordeles[1].searchVolume) {
+      document.querySelector(".term-actions__button--higher").click()
     }
-},0)
+},50)
